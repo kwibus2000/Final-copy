@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #bgColorTop {
@@ -117,7 +117,7 @@ header a .far {
   position: absolute;
   top: 5px;
   left: 270px;
-  background: rgb(111, 197, 220);
+  background: #6fc5dc;
   padding: 4px;
   color: #fff;
   border-radius: 4px;
@@ -127,6 +127,21 @@ hr {
   min-width: 200px;
   margin-top: 20px;
   opacity: 0.25;
+}
+
+.sectionContainerLeft,
+.sectionContainerRight {
+  margin: 20px 20%;
+  color: #aaa;
+}
+
+.h2-sub {
+  margin-bottom: 40px;
+}
+
+.sectionContainerLeft p {
+  font-size: 0.9rem;
+  margin-top: 20px;
 }
 
 @media(min-width: 700px) {  /* for bigger screens */
