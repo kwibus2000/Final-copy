@@ -5,15 +5,20 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
 
 #bgColorTop {
   height: 100vh;
-  background: linear-gradient(#6fc5dc, #e87c80);
+  /* gradient needs some opacity! */
+  background: linear-gradient(rgba(111, 197, 220, .9), rgba(232, 124, 128, .9)),
+  url("https://source.unsplash.com/L5DxWLmywmM");
+  background-size: cover;
+  background-position: center top;
 }
 
 nav {
-  margin: 0 10%;     /* %% to be responsive */
+  margin: 0 5%;     /* %% to be responsive */
   padding: 10px 0;
   display: flex;
   border-bottom: 1px solid #fff;
@@ -41,19 +46,87 @@ nav p {
   margin-left: auto;
 }
 
-a {
+.navWrap a {
   text-decoration: none;
   padding-left: 45px;
   text-transform: uppercase;
   color: #fff;
-  font-size: 12px;
+  font-size: .5rem;
 }
 
-a:last-child {
+/* .navWrap a:last-child {
   border: 1px solid #fff;
-  padding: 5px;
+  padding: 3px;
   margin-left: 45px;
   border-radius: 8px;
+} */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+header h1 {
+  font-weight: 200;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+header h3 {
+  font-weight: 200;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 50px;
+  font-size: 0.75rem;
+  font-weight: 200;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+header a .far {
+  opacity: .65;
+}
+
+.search {
+  position: relative;
+  color: #aaa;
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.search input {
+  width: 300px;
+  height: 32px;
+  background: #fcfcfc;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+  text-indent: 32px;
+}
+
+.search .far {
+  position: absolute;
+  top: 5px;
+  left: 270px;
+  background: rgb(111, 197, 220);
+  padding: 4px;
+  color: #fff;
+  border-radius: 4px;
+}
+
+hr {
+  min-width: 200px;
+  margin-top: 20px;
+  opacity: 0.25;
 }
 
 @media(min-width: 700px) {  /* for bigger screens */
