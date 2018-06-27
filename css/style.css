@@ -11,7 +11,7 @@ body {
   height: 100vh;
   /* gradient needs some opacity! */
   background: linear-gradient(rgba(111, 197, 220, .9), rgba(232, 124, 128, .9)),
-  url("https://source.unsplash.com/L5DxWLmywmM");
+  url(../img/background-image.jpg);
   background-size: cover;
   background-position: center top;
 }
@@ -141,30 +141,84 @@ hr {
 
 .creditCard {
   width: 100%;
+  box-shadow: 2px 40px 40px #d3d3d3;
 }
 
 .h2-sub {
   margin-bottom: 40px;
 }
 
-.sectionContainerLeft p {
+.sectionContainerLeft p, .sectionContainerRight p {
   font-size: 0.9rem;
   margin-top: 20px;
 }
 
-@media(min-width: 700px) {  /* for bigger screens */
+#bgColorSecondSection {
+  background: linear-gradient(#f1fafd, #fff);
+  border-top: 1px solid #f1fafd;
+}
+
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#Iphone {
+  width: 100%;
+  height: auto;
+}
+
+#bgColorThirdSection {
+  background: #bde6f8;
+}
+
+.thirdSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.thirdSection #Chart {
+  width: 100%;
+}
+
+.thirdSection p,
+.thirdSection h2 {
+  color: #274b5f;
+}
+
+/* Media query for screens >= 700 px wide */
+
+@media(min-width: 700px) {
   .navWrap {
     flex-direction: row;  /* next to each other */
   }
 
+  .navWrap a:last-child {
+  border: 1px solid #fff;
+  padding: 3px 3px 0 3px;
+  margin-left: 45px;
+  border-radius: 8px;
+}
+
   a:last-child {
-    margin-top: -5px;
+    margin-top: -3px;
   }
 
-  .firstSection {
+  .firstSection, .secondSection, .thirdSection {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+
+  .thirdSection .sectionContainerLeft {
+    flex: 1;
+  }
+
+  .thirdSection .sectionContainerRight {
+    flex: 2;
   }
 
   .sectionContainerLeft,
@@ -172,6 +226,10 @@ hr {
     margin: 50px;
     color: #aaa;
     width: 45%;
+  }
+
+  .sectionContainerRight {
+    margin-right: 150px;
   }
 
   .creditCard {
