@@ -177,7 +177,6 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .thirdSection #Chart {
@@ -187,6 +186,15 @@ hr {
 .thirdSection p,
 .thirdSection h2 {
   color: #274b5f;
+}
+
+#LapIphone {
+  width: 100%;
+}
+
+.fourthSection {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Media query for screens >= 700 px wide */
@@ -207,7 +215,10 @@ hr {
     margin-top: -3px;
   }
 
-  .firstSection, .secondSection, .thirdSection {
+  .firstSection,
+  .secondSection,
+  .thirdSection,
+  .fourthSection {
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -219,6 +230,14 @@ hr {
 
   .thirdSection .sectionContainerRight {
     flex: 2;
+  }
+
+  .fourthSection .sectionContainerLeft {
+    flex: 2;
+  }
+
+  .fourthSection .sectionContainerRight {
+    flex: 1;
   }
 
   .sectionContainerLeft,
