@@ -5,7 +5,6 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  /* overflow: hidden; */
 }
 
 #bgColorTop {
@@ -129,10 +128,19 @@ hr {
   opacity: 0.25;
 }
 
+.firstSection {
+  display: flex;
+  flex-direction: column;
+}
+
 .sectionContainerLeft,
 .sectionContainerRight {
   margin: 20px 20%;
   color: #aaa;
+}
+
+.creditCard {
+  width: 100%;
 }
 
 .h2-sub {
@@ -152,4 +160,22 @@ hr {
   a:last-child {
     margin-top: -5px;
   }
+
+  .firstSection {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sectionContainerLeft,
+  .sectionContainerRight {
+    margin: 50px;
+    color: #aaa;
+    width: 45%;
+  }
+
+  .creditCard {
+    width: 75%;
+  }
+
 }
